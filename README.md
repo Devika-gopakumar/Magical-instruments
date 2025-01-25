@@ -26,9 +26,9 @@ Leveraging the power of MediaPipe for real-time hand tracking, the system decode
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
+- [Python]
+- [Streamlit,OpenCV,MediaPipe,Pygame]
+- [Streamlit,OpenCV,MediaPipe,Pygame,NumPy,OS]
 - [Tools used]
 
 For Hardware:
