@@ -1,0 +1,5 @@
+streamlit
+pygame
+mediapipe
+numpy
+opencv-python
