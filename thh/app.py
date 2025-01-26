@@ -5,12 +5,12 @@ import mediapipe as mp
 import pygame
 from PIL import Image
 
-# Initialize MediaPipe for hand tracking
+# Initialize MediaPipe and drawing settings
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7)
 mp_draw = mp.solutions.drawing_utils
 
-# Initialize Pygame for sound
+# Initialize Pygame for sound mixing
 pygame.mixer.init()
 drum_sounds = {
     "bass": pygame.mixer.Sound("bass_drum.wav"),
@@ -26,7 +26,7 @@ guitar_sounds = {
     "E": pygame.mixer.Sound("chord_e.wav")
 }
 
-# Zones
+# Zones for touching
 drum_zones = {
     "bass": (50, 300, 200, 450),
     "snare": (250, 300, 400, 450),
@@ -41,7 +41,7 @@ guitar_zones = {
     "E": (530, 300, 630, 450)
 }
 
-# Webcam feed processing
+# Webcam feed processing with opencv
 def process_webcam(zones, sounds, zone_colors, title):
     st.title(title)
     run = st.checkbox("Start Webcam")
@@ -65,20 +65,20 @@ def process_webcam(zones, sounds, zone_colors, title):
                 cv2.rectangle(frame, (x1, y1), (x2, y2), zone_colors[zone], 2)
                 cv2.putText(frame, zone, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, zone_colors[zone], 2)
 
-            # Detect hands
+            # Detect hands (21marking)
             if results.multi_hand_landmarks:
                 for hand_landmarks in results.multi_hand_landmarks:
                     mp_draw.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
-                    # Get coordinates of the tip of the index finger
+                    # Get coordinates of the tip of the index finger, 8th marking
                     index_finger_tip = hand_landmarks.landmark[8]
                     x, y = int(index_finger_tip.x * frame.shape[1]), int(index_finger_tip.y * frame.shape[0])
 
-                    # Check 
+                    # Check for detection
                     for zone, (x1, y1, x2, y2) in zones.items():
                         if x1 < x < x2 and y1 < y < y2:
-                            sounds[zone].play() 
-                            cv2.circle(frame, (x, y), 15, (255, 255, 255), -1)  
+                            sounds[zone].play()  #play sounds
+                            cv2.circle(frame, (x, y), 15, (255, 255, 255), -1)   #white dotted markings
 
             
             stframe.image(frame, channels="BGR", use_column_width=True)
@@ -87,7 +87,7 @@ def process_webcam(zones, sounds, zone_colors, title):
     else:
         st.write("Click the checkbox to start the webcam!")
 
-# Streamlit 
+# Streamlit ui
 def main():
     st.title("Magical Music Instruments 🎶")
     st.write("Welcome to the Magical Instruments app! Choose your instrument below.")
