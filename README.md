@@ -11,7 +11,8 @@
 - Member 3: [Adithya Prakash] - [College of Engineering,Trivandrum]
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+[https://drive.google.com/file/d/1Gu6b891vIJC4silQ0IYyG6mdPKeSe1vS/view?usp=sharing]
+Due to the use of pygame- current limitations in available drivers, we are unable to support the hosting of the project at this time.
 
 ### Project Description
 [Magical Instruments is an innovative project that combines cutting-edge computer vision, machine learning, and audio synthesis to transform simple hand gestures into enchanting musical experiences.
@@ -30,11 +31,6 @@ For Software:
 - [Streamlit,OpenCV,MediaPipe,Pygame]
 - [Streamlit,OpenCV,MediaPipe,Pygame,NumPy,OS]
 
-### Implementation
-For Software:
-
-### Project Documentation
-For Software:
 
 # Screenshots (Add at least 3)
 [Screenshot1](Home page-Homepage consisting of instrument select-Drums or Guitar and start webcam will switch to camera frame.)
@@ -51,16 +47,14 @@ For Software:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[https://drive.google.com/file/d/1Gu6b891vIJC4silQ0IYyG6mdPKeSe1vS/view?usp=sharing]
+working of the whole magical instruments program
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Devika G]: []
-- [Swathi Jayadevan]: []
-- [Adithya Prakash]: []
+- [Devika G]: [mediapipe,web]
+- [Swathi Jayadevan]: [opencv,streamlit]
+- [Adithya Prakash]: [pygame, audio files]
 
 ---
 Made with ❤️ at TinkerHub
