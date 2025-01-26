@@ -29,20 +29,9 @@ For Software:
 - [Python]
 - [Streamlit,OpenCV,MediaPipe,Pygame]
 - [Streamlit,OpenCV,MediaPipe,Pygame,NumPy,OS]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
 For Software:
-# Installation
-[commands]
-
-# Run
-[commands]
 
 ### Project Documentation
 For Software:
