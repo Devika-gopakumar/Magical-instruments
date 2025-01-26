@@ -99,7 +99,7 @@ def main():
             zones=drum_zones,
             sounds=drum_sounds,
             zone_colors={"bass": (0, 255, 0), "snare": (255, 0, 0), "cymbal": (0, 0, 255)},
-            title="Magical Drums 🥁",
+            title="Magical Drums &",
         )
     elif choice == "Guitar":
         process_webcam(
@@ -112,7 +112,7 @@ def main():
                 "A": (0, 128, 255),
                 "E": (128, 255, 0),
             },
-            title="Magical Guitar 🎸",
+            title="Magical Guitar* ",
         )
 
 if __name__ == "__main__":
