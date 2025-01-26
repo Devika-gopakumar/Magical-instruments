@@ -37,27 +37,17 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+[Screenshot1](Home page)
+[Screenshot 2025-01-26 084711](https://github.com/user-attachments/assets/fa1acd9a-3033-4522-bb0b-0c5f51645618)
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+[Screenshot2](Drum keys)
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+[Screenshot 2025-01-26 084826](https://github.com/user-attachments/assets/1afc4cf2-eff0-42b5-8c52-a504a8375b88)
 
-For Hardware:
+[Screenshot3](Guitar keys)
+[Screenshot 2025-01-26 084858](https://github.com/user-attachments/assets/4231626b-9df1-43d4-991c-873da704c44e)
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 # Build Photos
 ![Team](Add photo of your team here)
