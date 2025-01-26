@@ -11,7 +11,8 @@ hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7
 mp_draw = mp.solutions.drawing_utils
 
 # Initialize Pygame for sound mixing
-pygame.mixer.init()
+# pygame.mixer.init()
+pygame.init()
 drum_sounds = {
     "bass": pygame.mixer.Sound("bass_drum.wav"),
     "snare": pygame.mixer.Sound("snare_drum.wav"),
