@@ -26,7 +26,7 @@ guitar_sounds = {
     "E": pygame.mixer.Sound("chord_e.wav")
 }
 
-# Zones for instruments
+# Zones
 drum_zones = {
     "bass": (50, 300, 200, 450),
     "snare": (250, 300, 400, 450),
@@ -49,18 +49,18 @@ def process_webcam(zones, sounds, zone_colors, title):
     if run:
         cap = cv2.VideoCapture(0)
 
-        stframe = st.empty()  # Placeholder for video frames
+        stframe = st.empty()  
 
         while run:
             ret, frame = cap.read()
             if not ret:
                 break
 
-            frame = cv2.flip(frame, 1)  # Flip horizontally
+            frame = cv2.flip(frame, 1)  
             rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             results = hands.process(rgb_frame)
 
-            # Draw zones
+            
             for zone, (x1, y1, x2, y2) in zones.items():
                 cv2.rectangle(frame, (x1, y1), (x2, y2), zone_colors[zone], 2)
                 cv2.putText(frame, zone, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, zone_colors[zone], 2)
@@ -70,24 +70,24 @@ def process_webcam(zones, sounds, zone_colors, title):
                 for hand_landmarks in results.multi_hand_landmarks:
                     mp_draw.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
-                    # Get coordinates of the tip of the index finger (landmark 8)
+                    # Get coordinates of the tip of the index finger
                     index_finger_tip = hand_landmarks.landmark[8]
                     x, y = int(index_finger_tip.x * frame.shape[1]), int(index_finger_tip.y * frame.shape[0])
 
-                    # Check if index finger is in any zone
+                    # Check 
                     for zone, (x1, y1, x2, y2) in zones.items():
                         if x1 < x < x2 and y1 < y < y2:
-                            sounds[zone].play()  # Play corresponding sound
-                            cv2.circle(frame, (x, y), 15, (255, 255, 255), -1)  # Visual feedback
+                            sounds[zone].play() 
+                            cv2.circle(frame, (x, y), 15, (255, 255, 255), -1)  
 
-            # Convert frame for Streamlit
+            
             stframe.image(frame, channels="BGR", use_column_width=True)
 
         cap.release()
     else:
         st.write("Click the checkbox to start the webcam!")
 
-# Streamlit app
+# Streamlit 
 def main():
     st.title("Magical Music Instruments 🎶")
     st.write("Welcome to the Magical Instruments app! Choose your instrument below.")
