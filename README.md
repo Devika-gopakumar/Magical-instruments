@@ -37,30 +37,17 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-[Screenshot1](Home page)
+[Screenshot1](Home page-Homepage consisting of instrument select-Drums or Guitar and start webcam will switch to camera frame.)
 [Screenshot 2025-01-26 084711](https://github.com/user-attachments/assets/fa1acd9a-3033-4522-bb0b-0c5f51645618)
 
 
-[Screenshot2](Drum keys)
+[Screenshot2](Drum keys - It supports 3 different drum modes:bass,snare and cymbal.)
 
 [Screenshot 2025-01-26 084826](https://github.com/user-attachments/assets/1afc4cf2-eff0-42b5-8c52-a504a8375b88)
 
-[Screenshot3](Guitar keys)
+[Screenshot3](Guitar keys - A variety of chords can be chosen as desired by the user. )
 [Screenshot 2025-01-26 084858](https://github.com/user-attachments/assets/4231626b-9df1-43d4-991c-873da704c44e)
 
-
-# Build Photos
-![Team](Add photo of your team here)
-
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
@@ -71,9 +58,9 @@ For Software:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Devika G]: []
+- [Swathi Jayadevan]: []
+- [Adithya Prakash]: []
 
 ---
 Made with ❤️ at TinkerHub
